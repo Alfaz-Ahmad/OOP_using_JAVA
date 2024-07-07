@@ -139,4 +139,3 @@ now, let:
 b1 = null;
 
 then b2 still refers to the original object.
-
