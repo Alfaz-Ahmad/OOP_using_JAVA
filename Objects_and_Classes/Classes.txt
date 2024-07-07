@@ -81,3 +81,62 @@ open (".\src\BoxDemo")
 Each object has its own copies of the instance variables.
 Change to the instance variable of one object have no effects on the instance variable of another.
 
+class BoxDemo2 {
+    public static void main(String[] args) {
+        Box myBox1 = new Box();
+        Box myBox2 = new Box();
+
+        //for myBox1
+        myBox1.width = 10;
+        myBox1.height = 5;
+        myBox1.depth = 4;
+        double volume1 = myBox1.width * myBox1.height * myBox1.depth;
+
+        //for myBox2
+        myBox2.width = 5;
+        myBox2.height = 4;
+        myBox2.depth = 2;
+        double volume2 = myBox2.width * myBox2.height * myBox2.depth;
+
+        System.out.println("First Volume: "+ volume1);
+        System.out.println("Second Volume: "+ volume2);
+    }
+}
+
+open (".\src\BoxDemo2.java")
+
+Data of myBox1 is completely different to the data of the myBox2 object.
+
+Obtaining object of a class is a two-step process.
+First, declare a variable of class type, this variable refer to an object.
+Second, you must acquire an actual, physical copy of the object and assign it to that variable.
+
+# New Operator
+
+The new operator dynamically allocate memory for the object and return a reference on it.
+The reference is then stored in the variable.
+
+class-var = new class-name();       //general form / syntax
+
+-> In Java, all class objects must be dynamically allocated.
+
+Box myBox = new Box();
+
+this statement is equivalent to
+
+Box myBox;                          //declare reference to object (initially contain null)
+myBox = new Box();                  //allocate a Box object (holds the memory address of the actual Box object)
+
+Assigning Object Reference Variable
+
+Box b1 = new Box();
+Box b2 = b1;
+
+-> b1 and b2 both refer to the same object.
+The assignment of b1 and b2 did not allocate memory or copy ant part of the original object.
+
+now, let:
+b1 = null;
+
+then b2 still refers to the original object.
+
