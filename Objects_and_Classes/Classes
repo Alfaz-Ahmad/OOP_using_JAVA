@@ -1,0 +1,83 @@
+Class is a blueprint of a data type. It determines the properties of a object.
+A Java class can contains:
+* Fields
+* Methods
+* Constructor
+* Blocks
+
+A class is declared by use of the class keyword.
+
+General Form:
+
+class ClassName{
+    type instance_variable1;
+    type instance_variable2;
+    type method1(parameters){
+        //body
+    }
+    type method2(parameters){
+        //body
+    }
+}
+
+In general:
+
+class <class_name>{
+    field;
+    method;
+}
+
+** <class_name> need to be Same as the name of the file and first letter need to be capital (convention)
+
+
+The data, or variable defined within a class are called instance variable.
+The code is contained within the methods.
+Combined variables and methods defined within a class are called as members of the class.
+
+Each instance of the class contains it's own copy of instance variable.
+The data of a class object/instance is separate and unique from the data of another.
+
+## Simple Class
+
+class Box{
+    double width;
+    double height;
+    double depth;
+}
+
+open (".\src\Box.java")
+
+Class 'Box' defines three variables: width, height, depth. And it doesn't contain any methods.
+-> The new data type is called Box.
+use 'Box' to declare objects.
+Class declaration only creates a template, it doesn't create an actual object.
+To create a Box object, we will use new keyword, like given statement below.
+
+Box myBox = new Box();          --> It creates a Box object called myBox;
+
+After the execution of above statement, an new instance of Box called myBox is created.
+
+To access the variables and method of a object, we will use dot operator. ->[.]
+dot operator likes the name of the object with name of an instance variable.
+
+> myBox.width = 100;            --> Assign the width variable of myBox the value of 100.
+
+This statement  tell the compiler to assign the copy of the width that is contained within the myBox object the value of 100
+
+public class BoxDemo {
+    public static void main(String[] args) {
+        Box myBox = new Box();                                          //Creating a Box object.
+        myBox.width = 10;                                               //Assigning the value
+        myBox.height = 5;                                               //Assigning the value
+        myBox.depth = 4;                                                //Assigning the value
+
+        double volume = myBox.width * myBox.height * myBox.depth;       //Computing volume Vol = l*b*h
+        System.out.println("Volume: "+ volume);                         //Displaying the value of volume (computed)
+    }
+}
+
+open (".\src\BoxDemo")
+
+Each object has its own copies of the instance variables.
+Change to the instance variable of one object have no effects on the instance variable of another.
+
