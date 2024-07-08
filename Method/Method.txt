@@ -36,7 +36,7 @@ public class Box {
     }
 }
 
-open (".\Method\src\Box.java")
+open (".\src\Box.java")
 
 public class BoxDemo {
     public static void main(String[] args) {
@@ -58,7 +58,7 @@ public class BoxDemo {
     }
 }
 
-open(".\Method\src\BoxDemo.java")
+open(".\src\BoxDemo.java")
 
 With return value
 
@@ -72,7 +72,7 @@ public class Box2 {
     }
 }
 
-open ("./Method/src/Box2.java")
+open (".\src\Box2.java")
 
 public class Box2Demo {
     public static void main(String[] args) {
@@ -97,7 +97,7 @@ public class Box2Demo {
     }
 }
 
-open ("./Method/src/Box2Demo.java")
+open (".\src\Box2Demo.java")
 
 # With Setter Method
 
@@ -117,7 +117,7 @@ public class Box3 {
     }
 }
 
-open (".\Method\src\Box3.java")
+open (".\src\Box3.java")
 
 public class Box3Demo {
     public static void main(String[] args) {
@@ -135,4 +135,4 @@ public class Box3Demo {
     }
 }
 
-open (".\Method\src\Box3Demo.java")
+open (".\src\Box3Demo.java")
