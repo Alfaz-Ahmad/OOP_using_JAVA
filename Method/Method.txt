@@ -1,0 +1,138 @@
+The method define how the member variables can be used.
+This mean that the behaviour and interface of a class are defined by the methods that operate on its instance data.
+
+(C/C++ programmers calls a function.)
+
+General form:
+
+type name(parameter-list){
+    // body of method
+}
+
+->type
+    specifies the type of data returned by the method. (including class type)
+    If the method doesn't return a value, then it return type must be void.
+
+->name
+    The name of the method id specified by name. (any legal identifier that is not predefined)
+
+->parameter-list
+    The sequence of type and identifier pairs separated by commas.
+    Parameters are essentially variables that receive the value if the arguments passed to the method when it called.
+    If the method has no parameters, then the parameter list is empty.
+
+# If return type other than void return a value to the calling routine using the following form of the return statement.
+> return value;
+value id the value returned.
+
+public class Box {
+    double width;
+    double height;
+    double depth;
+
+    void volume(){
+        System.out.print("Volume: ");
+        System.out.println(width*height*depth);
+    }
+}
+
+open (".\Method\src\Box.java")
+
+public class BoxDemo {
+    public static void main(String[] args) {
+        Box myBox2 = new Box();
+        Box myBox1 = new Box();
+
+        //for myBox1
+        myBox1.width = 10;
+        myBox1.height = 5;
+        myBox1.depth = 4;
+
+        //for myBox2
+        myBox2.width = 5;
+        myBox2.height = 4;
+        myBox2.depth = 2;
+
+        myBox1.volume();            //method call
+        myBox2.volume();            //method call
+    }
+}
+
+open(".\Method\src\BoxDemo.java")
+
+With return value
+
+public class Box2 {
+    double width;
+    double height;
+    double depth;
+
+    double volume(){
+        return width*height*depth;
+    }
+}
+
+open ("./Method/src/Box2.java")
+
+public class Box2Demo {
+    public static void main(String[] args) {
+        Box2 myBox1 = new Box2();
+        Box2 myBox2 = new Box2();
+
+        //for myBox1
+        myBox1.width = 10;
+        myBox1.height = 5;
+        myBox1.depth = 4;
+
+        //for myBox2
+        myBox2.width = 5;
+        myBox2.height = 4;
+        myBox2.depth = 2;
+
+        double vol1 = myBox1.volume();            //method call
+        System.out.println("Volume: "+vol1);
+
+        double vol2 = myBox2.volume();            //method call
+        System.out.println("Volume: "+vol2);
+    }
+}
+
+open ("./Method/src/Box2Demo.java")
+
+# With Setter Method
+
+public class Box3 {
+    double width;
+    double height;
+    double depth;
+
+    double volume(){
+        return width*height*depth;
+    }
+
+    void getDim(double w, double h, double d){
+        width = w;
+        height = h;
+        depth = d;
+    }
+}
+
+open (".\Method\src\Box3.java")
+
+public class Box3Demo {
+    public static void main(String[] args) {
+        Box3 myBox1 = new Box3();
+        Box3 myBox2 = new Box3();
+
+        myBox1.getDim(10, 5, 4);
+        myBox2.getDim(5, 4, 2);
+
+        double vol1 = myBox1.volume();            //method call
+        System.out.println("Volume: "+vol1);
+
+        double vol2 = myBox2.volume();            //method call
+        System.out.println("Volume: "+vol2);
+    }
+}
+
+open (".\Method\src\Box3Demo.java")

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Method/Method.iml" filepath="$PROJECT_DIR$/Method/Method.iml" />
       <module fileurl="file://$PROJECT_DIR$/Objects_and_Classes/Methods_of_Object_Creation/Methods_of_Object_Creation.iml" filepath="$PROJECT_DIR$/Objects_and_Classes/Methods_of_Object_Creation/Methods_of_Object_Creation.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/OOP_using_JAVA.iml" filepath="$PROJECT_DIR$/.idea/OOP_using_JAVA.iml" />
       <module fileurl="file://$PROJECT_DIR$/Objects_and_Classes/Objects_and_Classes.iml" filepath="$PROJECT_DIR$/Objects_and_Classes/Objects_and_Classes.iml" />

@@ -1,3 +1,7 @@
+A class defines the structure and behaviour that will we shared by a set of objects.
+Each object if a given class contains the structure and behaviour defined by the class.
+A class is a logical construction an object has physical reality.
+
 Class is a blueprint of a data type. It determines the properties of a object.
 A Java class can contains:
 * Fields
